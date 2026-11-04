@@ -34,6 +34,7 @@ output/
 
 # ...except keep the core Auckland skyline asset
 !auckland_skyline.jpg
+!christchurch.jpg
 
 # Log and data files
 *.adi
