@@ -65,6 +65,23 @@ def font(style: str, size: int) -> ImageFont.FreeTypeFont:
     return resolve_font(filename, size, fallbacks)
 
 
+def text(
+    d: ImageDraw.ImageDraw,
+    xy: tuple[float, float],
+    s: str,
+    f: ImageFont.FreeTypeFont,
+    fill: tuple[int, ...],
+    spacing: float = 0,
+) -> None:
+    x, y = xy[0] * S, xy[1] * S
+    if not spacing:
+        d.text((x, y), s, font=f, fill=fill)
+        return
+    for ch in s:
+        d.text((x, y), ch, font=f, fill=fill)
+        x += f.getlength(ch) + spacing * S
+
+
 def text_with_shadow(
     d: ImageDraw.ImageDraw,
     xy: tuple[float, float],
