@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE / Editor configuration
+.vscode/
+.idea/
+
+# Operating System artifacts
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Generated image outputs & batch card exports
+front.png
+front_*.png
+back_*.png
+qsl_*.png
+cards/
+output/
+
+# Ignore general images by default...
+*.png
+*.jpg
+*.jpeg
+
+# ...except keep the core Auckland skyline asset
+!auckland_skyline.jpg
+
+# Log and data files
+*.adi
+*.adif
+*.log
